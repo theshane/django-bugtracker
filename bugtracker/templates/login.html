@@ -1,0 +1,24 @@
+{% extends 'wrapper.html' %} 
+{% block 'content' %}
+<div class="row">
+    <div class="col-xs-12">
+        <form action="/login" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="">Email</label>
+              <input type="text" class="form-control" name="email" id="" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">The email address that you used to register</small>
+            </div>
+            <div class="form-group">
+              <label for="">Password</label>
+              <input type="password" class="form-control" name="password" id="" placeholder="">
+            </div>
+            <!-- <div class="form-group">
+                <label for="">Confirm Password</label>
+                <input type="password" class="form-control" name="password-confirm" id="" placeholder="">
+              </div> -->
+            <input name="" id="" class="btn btn-primary" type="submit" value="Login">
+        </form>
+    </div>
+</div>
+{% endblock %}
